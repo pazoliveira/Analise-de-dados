@@ -1,0 +1,57 @@
+# =========================
+# Python / Ambientes Virtuais
+# =========================
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+env/
+.env/
+Pipfile.lock
+
+# =========================
+# Jupyter Notebooks
+# =========================
+.ipynb_checkpoints/
+
+# =========================
+# Dados (MUITO IMPORTANTE)
+# =========================
+# Ignore arquivos de dados brutos ou grandes para não travar seu repositório
+*.csv
+*.tsv
+*.xlsx
+*.xls
+*.parquet
+*.json
+data/
+datasets/
+
+# =========================
+# Modelos de Machine Learning
+# =========================
+*.pkl
+*.h5
+*.model
+
+# =========================
+# Variáveis de Ambiente e Senhas
+# =========================
+.env
+.env.local
+.env.*
+secrets.json
+
+# =========================
+# Power BI (Opcional)
+# =========================
+# Arquivos .pbix contêm os dados embutidos e costumam ser muito pesados
+# É recomendado versionar apenas o .pbit (Power BI Template), que guarda apenas a estrutura
+*.pbix
+
+# =========================
+# Arquivos do Sistema Operacional
+# =========================
+.DS_Store
+Thumbs.db
