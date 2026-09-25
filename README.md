@@ -39,6 +39,13 @@ A hipótese alternativa ($H_1$) é que isso ocorra por conta de um víes sistêm
 
   Este é um trabalho acadêmico, independente e autoral, sem vínculo formal com o OBMigra ou do orgão que publicizou a fonte dos dados.
 
+## Métricas de validação
+
+AIC / BIC (para comparação de modelos);
+Pseudo-$R^2$ (McFadden);Matriz de Confusão e Acurácia / Sensibilidade / Especificidade;
+Curva ROC e AUC (capacidade discriminativa do modelo);
+Matriz de Resíduos / Teste de Hosmer-Lemeshow (ajuste do modelo).
+
 ## Etapa 2 - Coleta e ETL:
 
 ## Etapa 3 - Análise Exploratória de Dados:
