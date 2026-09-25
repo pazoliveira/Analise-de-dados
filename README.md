@@ -1,6 +1,22 @@
 ### Análise de dados usando R e Shiny para explorar base de dados de Imigração no Brasil
 
-Este é um projeto educativo em fase de estruturação acerca de vieses sistêmicos contra migrantes no Brasil e visa utilizar os conhecimentos e dados obtidos no curso Introdução ao R para Análise de Dados de Imigração — SEMUNI 2026 para produzir um painel interativo focado em buscar evidências quantitativas de discriminação racial ou geográfica no deferimento de vistos de trabalho de migrantes no Brasil.
+Este é um projeto educativo em fase de desenvolvimento acerca de vieses sistêmicos contra migrantes no Brasil e visa utilizar os conhecimentos e dados obtidos no curso Introdução ao R para Análise de Dados de Imigração — SEMUNI 2026 para produzir um painel interativo focado em buscar evidências quantitativas de discriminação racial ou geográfica no deferimento de vistos de trabalho de migrantes no Brasil através do uso de estatística inferencial
+
+### Histórico do projeto
+
+Na primeira atualização de escopo desse projeto foi feita a expansão do objetivo inicial do trabalho para abarcar os conhecimentos abarcados no curso citado, assim como a criação da pergunta guia do projeto e alguns dos parâmetros de saída e entrada do sistema.
+
+Na segunda atualização, há especificação sobre a parte estatística do projeto com a definição das variáveis dependentes e independentes e a melhoria geral da organização e estrutura do projeto para um projeto de ciência de dados.
+
+### A pergunta que desejamos responder: 
+
+Se temos dois pessoas aplicando para um visto de trabalho no Brasil que possuam a mesma escolaridade, aplicando pela mesmo norma jurídica e indo para o mesmo local, mas de origens ou matrizes demográficas diferentes, isso afeta a chance de deferimento do visto?
+
+### Formulação Estátistica:
+
+Variável dependente: A decisão sobre a concessão do visto(Deferido ou indeferido)
+
+Variáveis independentes: Matriz demográfica predominante de origem(X¹), bloco geopolítico(X²), escolaridade do solicitante(X³), IDH ou Renda per capita do país de origem(váriavel correlacionada, portanto apenas uma das duas)(X⁴), IDH-M ou Renda per capita do Estado de origem do local de destino(X⁵), Norma jurídica(X⁶)
 
 ### ETAPAS DO PROJETO:
 
