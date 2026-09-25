@@ -1,6 +1,6 @@
 ### Análise de dados usando R e Shiny para explorar base de dados de Imigração no Brasil
 
-### Histórico do projeto
+## Histórico do projeto
 
   Na primeira atualização de escopo desse projeto foi feita a expansão do objetivo inicial do trabalho para abarcar os conhecimentos adquiridos no curso citado, assim como a criação da pergunta guia do projeto e alguns dos parâmetros de saída e entrada do sistema.
 
@@ -39,9 +39,9 @@ A hipótese alternativa ($H_1$) é que isso ocorra por conta de um víes sistêm
 
   Este é um trabalho acadêmico, independente e autoral, sem vínculo formal com o OBMigra ou do orgão que publicizou a fonte dos dados.
 
-## Etapa 2 - Coleta e ETL (Extract, Transform, Load):
+## Etapa 2 - Coleta e ETL:
 
-## Etapa 3 - Análise Exploratória de Dados (EDA):
+## Etapa 3 - Análise Exploratória de Dados:
 
 ## Etapa 4 - Modelagem Estatística:
 
