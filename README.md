@@ -1,88 +1,53 @@
 ### Análise de dados usando R e Shiny para explorar base de dados de Imigração no Brasil
 
-Este é um projeto educativo em fase de desenvolvimento acerca de vieses sistêmicos contra migrantes no Brasil e visa utilizar os conhecimentos e dados obtidos no curso Introdução ao R para Análise de Dados de Imigração — SEMUNI 2026 para produzir um painel interativo focado em buscar evidências quantitativas de discriminação racial ou geográfica no deferimento de vistos de trabalho de migrantes no Brasil através do uso de estatística inferencial
-
 ### Histórico do projeto
 
-Na primeira atualização de escopo desse projeto foi feita a expansão do objetivo inicial do trabalho para abarcar os conhecimentos abarcados no curso citado, assim como a criação da pergunta guia do projeto e alguns dos parâmetros de saída e entrada do sistema.
+  Na primeira atualização de escopo desse projeto foi feita a expansão do objetivo inicial do trabalho para abarcar os conhecimentos adquiridos no curso citado, assim como a criação da pergunta guia do projeto e alguns dos parâmetros de saída e entrada do sistema.
 
-Na segunda atualização, há especificação sobre a parte estatística do projeto com a definição das variáveis dependentes e independentes e a melhoria geral da organização e estrutura do projeto para um projeto de ciência de dados.
+  Na segunda atualização, há especificação sobre a parte estatística do projeto com a definição das variáveis dependentes e independentes e a melhoria geral da organização e estrutura do projeto.
 
-### A pergunta que desejamos responder: 
+  Nessa terceira atualização, é feito o preenchimento dos parâmetros da primeira etapa da investigação.
 
-Se temos dois pessoas aplicando para um visto de trabalho no Brasil que possuam a mesma escolaridade, aplicando pela mesmo norma jurídica e indo para o mesmo local, mas de origens ou matrizes demográficas diferentes, isso afeta a chance de deferimento do visto?
+## Etapa 1 - Problema de Pesquisa, Mapeamento e Hipóteses
+Pergunta de Pesquisa e Escopo
 
-### Formulação Estátistica:
+  Este é um projeto educativo em fase de desenvolvimento acerca de vieses sistêmicos na concessão de vistos de trabalho no Brasil e visa utilizar os conhecimentos e dados obtidos no curso Introdução ao R para Análise de Dados de Imigração — SEMUNI 2026 para produzir um painel interativo focado em buscar evidências quantitativas de discriminação racial ou geográfica no deferimento de vistos de trabalho através do uso de estatística inferencial
 
-Variável dependente: A decisão sobre a concessão do visto(Deferido ou indeferido)
+  Serão analisados exclusivamente os resultado definitivos "Deferido" e "indeferido" - Outros status intermediários ou administrativos como "Em exigência", "cancelado" serão desconsiderados para os propósitos desta pesquisa. 
 
-Variáveis independentes: Matriz demográfica predominante de origem(X¹), bloco geopolítico(X²), escolaridade do solicitante(X³), IDH ou Renda per capita do país de origem(váriavel correlacionada, portanto apenas uma das duas)(X⁴), IDH-M ou Renda per capita do Estado de origem do local de destino(X⁵), Norma jurídica(X⁶)
+## Tradução Operacional(Mapeamento das váriaveis)
+  A probabilidade de deferimento será calculada usando a função da regressão logística. Nossa variável dependente Y assumirá um valor estrito onde: 0 é indeferido e 1 é deferido.
 
-### ETAPAS DO PROJETO:
+  Nossas variáveis de interesse (X¹, X², X³) são o fator bloco geopolítico, continente e matriz demográfica predominante de origem da pessoa aplicante e nossa categoria de referência será o continente europeu / Norte Global / Matriz demográfica predominante branca, por representar um grupo privilegiado no contexto migratório.(Para evitar problemas de multicolinearidade, as variáveis X1, X2,X3 serão testadas separadamente)
 
-1ª etapa - Estruturação
-Nesta etapa, estrutura-se a arquitetura e organização do projeto, com a definição e explicação educativa sobre os parâmetros de entrada e saída da aplicação.
+Variáveis de controle: escolaridade do solicitante(X4), IDH ou Renda per capita do país de origem(váriavel correlacionada, portanto apenas uma das duas)(X5), IDH-M ou Renda per capita do Estado de origem do local de destino(X6), Norma jurídica(X7)
 
-2ª etapa - Aplicação
+* $X_4$ - Está controlando a influência do fator educacional (capital humano)
+* $X_5$ - Está controlando a influência do fator econômico ou social do aplicante (Vulnerabilidade social/econômica de origem)
+* $X_6$ - Está controlando a influência do fator econômico ou social do Estado de Destino (demanda do mercado local)
+* $X_7$ - Está controlando a influência do fator legal/burocrático (Normas jurídicas / Amparo legal do visto)
 
-Desenvolvimento da aplicação
+## Formalização de hipóteses
 
-Organização dos arquivos
+A hipótese Nula ($H_0$) é que qualquer tipo de desvio ocorra por pura coincidência ou por variância natural dos dados escolhidos.
 
-Mapeamento
+A hipótese alternativa ($H_1$) é que isso ocorra por conta de um víes sistêmico contra determinadas matrizes populacionais ou/e blocos geopolíticos. A hipótese $H_0$ só será rejeitada caso o p-valor associado as variáveis de interesse seja menor que 0,05 e o Odds Ratio (OR) gerados sejam significativamente diferentes de 1.
 
-Modelagem estatística
+## Governança 
 
-3ª etapa - Finalização
-Observam-se os resultados, tiram-se conclusões, revisa-se e compartilha-se o projeto.
+  Os dados pessoais dos aplicantes já estão anônimos em conformidade com a LGPD e a LAI.
 
-### ENTRADAS SELECIONADAS:
+  Este é um trabalho acadêmico, independente e autoral, sem vínculo formal com o OBMigra ou do orgão que publicizou a fonte dos dados.
 
-Com base nas informações disponíveis no banco de dados, os parâmetros escolhidos para a composição do projeto serão os seguintes:
+## Etapa 2 - Coleta e ETL (Extract, Transform, Load):
 
-ALTERNÂNCIA DE PANORAMA (Seletor de visão):
-MATRIZ DEMOGRÁFICA PREDOMINANTE DO PAÍS DE ORIGEM
+## Etapa 3 - Análise Exploratória de Dados (EDA):
 
-BLOCO GEOPOLÍTICO (Sub-regiões do Sul Global e Norte Global)
+## Etapa 4 - Modelagem Estatística:
 
-FILTROS DE ORIGEM
-Matriz Demográfica Predominante:
-Checkboxes para seleção individual ou múltipla das 4 matrizes (Asiática, Afrodescendente, Caucasiana ou Povos Originários).
+## Etapa 5 - Avaliação e Validação:
 
-Concentração Populacional:
-Slider com o intervalo percentual do grupo no país de origem.
+## Etapa 6 - Divulgação dos dados:
 
-Perfil Econômico:
-Faixa de renda do Banco Mundial e IDH.
 
-FILTROS DE DESTINO
-UF / Região de Recepção:
-Seleção dos estados de destino pela coluna de localização do estrangeiro.
-
-Perfil Socioeconômico do Destino:
-PIB per capita e IDH-M das Unidades Federativas brasileiras.
-
-FILTROS INSTITUCIONAIS:
-Amparo Legal / Norma Jurídica (Resoluções Normativas e Portarias):
-Diferentes normas possuem diferentes requisitos e exigências legais.
-
-Modalidade Administrativa (CGIL vs. CNIg):
-
-CGIL (Coordenação-Geral de Imigração Laboral): analisa pedidos ordinários.
-
-CNIg (Conselho Nacional de Imigração): analisa casos mais complexos e recursos.
-
-Perfil do Solicitante:
-Escolaridade, faixa etária e gênero.
-
-PARÂMETROS DE SAÍDA (Métricas exibidas):
-Taxa Bruta de Indeferimento (%)
-
-Risco Relativo Ajustado (Odds Ratio da Regressão Logística)
-
-### Fonte dos Dados e Governança
-* **Origem:** Observatório das Migrações Internacionais (OBMigra) / Ministério da Justiça e Segurança Pública (MJSP) / Ministério do Trabalho e Emprego (MTE).
-* **Licenciamento:** Dados Abertos (Lei nº 12.527/2011 e Decreto nº 8.777/2016).
-* **Proteção de Privacidade:** A base utilizada é integralmente anonimizada, não contendo dados pessoais identificáveis (PII), em conformidade com a LGPD (Lei nº 13.709/2018).
-* **Aviso de Isenção (Disclaimer):** Este projeto é uma análise independente com fins acadêmicos/estudantis e não possui vínculo oficial com o Ministério do Trabalho e Emprego ou com o OBMigra.
 
