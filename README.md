@@ -18,9 +18,9 @@ Pergunta de Pesquisa e Escopo
 ## Tradução Operacional(Mapeamento das váriaveis)
   A probabilidade de deferimento será calculada usando a função da regressão logística. Nossa variável dependente Y assumirá um valor estrito onde: 0 é indeferido e 1 é deferido.
 
-  Nossas variáveis de interesse ($_$, $_$, $_$) são o fator bloco geopolítico, continente e matriz demográfica predominante de origem da pessoa aplicante e nossa categoria de referência será o continente europeu / Norte Global / Matriz demográfica predominante branca, por representar um grupo privilegiado no contexto migratório.(Para evitar problemas de multicolinearidade, as variáveis serão testadas separadamente)
+  Nossas variáveis de interesse ($X_1$ ,$X_2$ ,$X_3$) são o fator bloco geopolítico, continente e matriz demográfica predominante de origem da pessoa aplicante e nossa categoria de referência será o continente europeu / Norte Global / Matriz demográfica predominante branca, por representar um grupo privilegiado no contexto migratório.(Para evitar problemas de multicolinearidade, as variáveis serão testadas separadamente)
 
-Variáveis de controle: escolaridade do solicitante($_$), IDH ou Renda per capita do país de origem(váriavel correlacionada, portanto apenas uma das duas)($_$), IDH-M ou Renda per capita do Estado de origem do local de destino($_$), Norma jurídica($_$)
+  Variáveis de controle: escolaridade do solicitante($X_4$), IDH ou Renda per capita do país de origem(váriavel correlacionada, portanto apenas uma das duas)($X_5$), IDH-M ou Renda per capita do Estado de origem do local de destino($X_6$), Norma jurídica($X_7$)
 
 * $X_4$ - Está controlando a influência do fator educacional (capital humano)
 * $X_5$ - Está controlando a influência do fator econômico ou social do aplicante (Vulnerabilidade social/econômica de origem)
