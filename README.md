@@ -1,13 +1,5 @@
 ### Viés Sistêmico em Vistos de Trabalho no Brasil: uma Análise com Regressão Logística e Estatística Inferencial
 
-## Histórico do projeto
-
-  Na primeira atualização de escopo desse projeto foi feita a expansão do objetivo inicial do trabalho para abarcar os conhecimentos adquiridos no curso citado, assim como a criação da pergunta guia do projeto e alguns dos parâmetros de saída e entrada do sistema.
-
-  Na segunda atualização, há especificação sobre a parte estatística do projeto com a definição das variáveis dependentes e independentes e a melhoria geral da organização e estrutura do projeto.
-
-  Nessa terceira atualização, é feito o preenchimento dos parâmetros da primeira etapa da investigação.
-
 ## Etapa 1 - Problema de Pesquisa, Mapeamento e Hipóteses
 Pergunta de Pesquisa e Escopo
 
