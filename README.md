@@ -41,9 +41,11 @@ A hipótese alternativa ($H_1$) é que isso ocorra por conta de um víes sistêm
 
 ## Métricas de validação
 
-AIC / BIC (para comparação de modelos);
-Pseudo-$R^2$ (McFadden);
-Matriz de Resíduos / Teste de Hosmer-Lemeshow (ajuste do modelo).
+AIC / BIC (para comparação de modelos)
+
+Pseudo-$R^2$ (McFadden)
+
+Matriz de Resíduos / Teste de Hosmer-Lemeshow (ajuste do modelo)
 
 ## Etapa 2 - Coleta e ETL:
 
