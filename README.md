@@ -1,4 +1,4 @@
-### Análise de dados usando R e Shiny para explorar base de dados de Imigração no Brasil
+### Viés Sistêmico em Vistos de Trabalho no Brasil: uma Análise com Regressão Logística e Estatística Inferencial
 
 ## Histórico do projeto
 
@@ -18,9 +18,9 @@ Pergunta de Pesquisa e Escopo
 ## Tradução Operacional(Mapeamento das váriaveis)
   A probabilidade de deferimento será calculada usando a função da regressão logística. Nossa variável dependente Y assumirá um valor estrito onde: 0 é indeferido e 1 é deferido.
 
-  Nossas variáveis de interesse (X¹, X², X³) são o fator bloco geopolítico, continente e matriz demográfica predominante de origem da pessoa aplicante e nossa categoria de referência será o continente europeu / Norte Global / Matriz demográfica predominante branca, por representar um grupo privilegiado no contexto migratório.(Para evitar problemas de multicolinearidade, as variáveis X1, X2,X3 serão testadas separadamente)
+  Nossas variáveis de interesse ($_$, $_$, $_$) são o fator bloco geopolítico, continente e matriz demográfica predominante de origem da pessoa aplicante e nossa categoria de referência será o continente europeu / Norte Global / Matriz demográfica predominante branca, por representar um grupo privilegiado no contexto migratório.(Para evitar problemas de multicolinearidade, as variáveis serão testadas separadamente)
 
-Variáveis de controle: escolaridade do solicitante(X4), IDH ou Renda per capita do país de origem(váriavel correlacionada, portanto apenas uma das duas)(X5), IDH-M ou Renda per capita do Estado de origem do local de destino(X6), Norma jurídica(X7)
+Variáveis de controle: escolaridade do solicitante($_$), IDH ou Renda per capita do país de origem(váriavel correlacionada, portanto apenas uma das duas)($_$), IDH-M ou Renda per capita do Estado de origem do local de destino($_$), Norma jurídica($_$)
 
 * $X_4$ - Está controlando a influência do fator educacional (capital humano)
 * $X_5$ - Está controlando a influência do fator econômico ou social do aplicante (Vulnerabilidade social/econômica de origem)
@@ -42,8 +42,7 @@ A hipótese alternativa ($H_1$) é que isso ocorra por conta de um víes sistêm
 ## Métricas de validação
 
 AIC / BIC (para comparação de modelos);
-Pseudo-$R^2$ (McFadden);Matriz de Confusão e Acurácia / Sensibilidade / Especificidade;
-Curva ROC e AUC (capacidade discriminativa do modelo);
+Pseudo-$R^2$ (McFadden);
 Matriz de Resíduos / Teste de Hosmer-Lemeshow (ajuste do modelo).
 
 ## Etapa 2 - Coleta e ETL:
